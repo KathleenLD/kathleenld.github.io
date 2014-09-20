@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<style type="text/css"> 
+#map { height: 600px; } 
+</style>
+
+</head>
+
+<body>
+<div id="map"></div>
+
+	<script> 
+		var map = L.map('map').setView([52.51, 13.46], 14); 
+		L.tileLayer('http://{s}.tiles.mapbox.com/v3/kathleen.ji75lc65/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>'		
+	}).addTo(map);
+		var marker = L.marker([52.500586,13.417528
+	]).addTo(map);marker.bindPopup("Work");
+		var circle = L.circle([52.515,13.4556], 3000, {
+			color: 'blue',
+			fillColor: '#99ccff',
+			fillOpacity: 0.15
+	}).addTo(map);circle.bindPopup("circle!");
+		var marker = L.marker([52.508787,13.4549958
+	]).addTo(map);marker.bindPopup("home");
+		var marker = L.marker([52.508385496,13.4594321
+	]).addTo(map);marker.bindPopup("Schneeweiß");
+
+	</script>
+</body>
+</html>
