@@ -22,15 +22,22 @@
 	}).addTo(map);
 		var marker = L.marker([52.500586,13.417528
 	]).addTo(map);marker.bindPopup("Work");
-		var circle = L.circle([52.515,13.4556], 3000, {
-			color: 'blue',
-			fillColor: '#99ccff',
-			fillOpacity: 0.15
-	}).addTo(map);circle.bindPopup("circle!");
 		var marker = L.marker([52.508787,13.4549958
 	]).addTo(map);marker.bindPopup("home");
 		var marker = L.marker([52.508385496,13.4594321
 	]).addTo(map);marker.bindPopup("Schneeweiß");
+		var marker = L.marker([52.5102808,13.4711802
+	]).addTo(map);marker.bindPopup("<strong>The Antlered Bunny</strong>");
+		var marker = L.marker([52.53175035,13.394447565
+	]).addTo(map);marker.bindPopup("REDWOOD");
+		var bounds = [
+		[52.4974136,13.41430664],
+		[52.5139226,13.47679138]];
+		L.rectangle(bounds, {
+			color: "green", 
+			fillOpacity: 0.1,
+			weight: 1
+	}).addTo(map);
 
 	</script>
 </body>
